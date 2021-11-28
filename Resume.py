@@ -50,8 +50,8 @@ fileName = r'C:\Users' + chr(92) + os.environ["USERNAME"] + r'\Downloads\FreundA
 documentTitle = 'FreundAndrew_Resume'
 fullName = 'Andrew Freund'
 contactInformation = [
-    '7759 Heatherglen Dr, Cincinnati, OH 45255',
-    '440-339-6191 | andrewifreund@outlook.com',
+    'Cincinnati, OH',
+    'REDACTED',
 ]
 education = [
     'Miami University, Oxford OH',
