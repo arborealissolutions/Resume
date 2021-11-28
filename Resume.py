@@ -241,4 +241,4 @@ create_features('Multi', skillSet2, 50, 198, font_type=fontTypeBase, font_size=9
 
 # save the pdf
 pdf.save()
-os.system(fileName)
+# os.system(fileName)
