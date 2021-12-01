@@ -40,8 +40,8 @@ def create_features(typing, string, x, y, x1=0, x2=0, font_type='', font_size=0)
 # Creating a resume using Python
 # Initializing initial variables
 titleSize = 20
-headerSize = 16
-textSize = 11
+headerSize = 11
+textSize = 8
 fontTypeBase = 'Times-Roman'
 fontTypeBold = 'Times-Bold'
 
@@ -51,7 +51,7 @@ documentTitle = 'FreundAndrew_Resume'
 fullName = 'Andrew Freund'
 contactInformation = [
     'Cincinnati, OH',
-    'REDACTED',
+    'Redacted for Internet Safety',
 ]
 education = [
     'Miami University, Oxford OH',
@@ -60,42 +60,40 @@ education = [
 ]
 metaData = [
     'Created using Python, Reportlab',
-    'For source code, go to:',
-    'https://github.com/arborealissolutions/Resume'
+    'For source code, go to GitHub:',
+    'https://tinyurl.com/freundresume'
 ]
 latestJob = 'Database Administrator and Developer (Database Specialist)'
 latestEmployer = 'Hamilton County Public Health, Cincinnati OH'
 latestTime = 'November 2019 - Present'
 latestDesc = [
-    'Responsible for creating, maintaining, and updating Microsoft Access databases for agency-wide programs '
-    'and projects.',
-    'Utilized Python, PowerShell, VBA, and C# to create tools and procedures to improve IT efficiency and '
-    'response rate.',
-    'Used Python scripting to automate the creation and maintenance of GIS data layers through ArcPY, '
-    'both locally and on the web.',
-    'Developed various data cleaning and verification tools to improve reliability of in agency-wide tools.',
-    'Cleaned and prepared COVID-19 data for analysis and geocoding',
+    'Responsible for creating, maintaining, and updating Microsoft Access databases for agency-wide programs and '
+    'projects. Utilized Python, PowerShell, ',
+    'VBA, and C# to create tools and procedures to improve IT efficiency and response rate. Used Python scripting to '
+    'automate the creation and maintenance ',
+    'of GIS data layers through ArcPY, both locally and on the web. Developed various data cleaning and verification '
+    'tools to improve reliability of in ',
+    'agency-wide tools. Cleaned and prepared COVID-19 data for analysis and geocoding',
 ]
 previousJob = 'GIS Specialist (Public Health Sanitarian I)'
 previousEmployer = 'Hamilton County Public Health, Cincinnati OH'
 previousTime = 'October 2018 - November 2019'
 previousDesc = [
-    'Responsible for department GIS data, including managing, updating, and processing data for hosting '
-    'on ArcGIS Online.',
-    'Created Python scripts to manage routine updates, query non-GIS data, and join existing layers with databases.',
-    'Represented organization by attending inter-governmental advisory committee and bringing back relevant '
-    'information to superiors.',
-    'Created field data collection applications tied to existing ESRI products.',
+    'Developed and maintained department GIS data, including managing, updating, and processing data for hosting on '
+    'ArcGIS Online. Utilized Python ',
+    'scripts to manage routine updates, query non-GIS data, and join existing layers with databases. Represented '
+    'organization by attending inter-governmental ',
+    'advisory committee and bringing back relevant information to superiors. Created field data collection '
+    'applications tied to existing ESRI products.',
     'Followed and applied State code during routine inspections on septic systems',
     ]
 job1 = 'AmeriCorps VISTA Member'
 employer1 = 'Calhoun County Land Bank Authority, Marshall MI'
 time1 = 'July 2017 - July 2018'
 desc1 = [
-    'Responsible for building capacity at host organization, which included streamlining program review processes, '
-    'grant funded project',
-    'tracking, and creating a Neighborhood Health Index for the City of Albion through the data collection '
-    'and cleaning followed by the',
+    'Built capacity at host organization, which included streamlining program review processes, '
+    'grant funded project tracking, and creating ',
+    'a Neighborhood Health Index for the City of Albion through the data collection and cleaning followed by the '
     'application of ArcGIS methodologies',
     ]
 job2 = 'GIS Associate'
@@ -107,10 +105,10 @@ job3 = 'Researcher'
 employer3 = 'Miami University, Oxford OH'
 time3 = 'February 2016 - May 2017'
 desc3 = [
-    'Began research on ecosystem service provision in exurban parcels containing at least one pond, including creating'
-    ' a raster land use map',
-    ' and training remote sensing analysis, identifying uses and desires of individuals living in isolated rural '
-    'parcels that lead to publication',
+    'Began research on ecosystem service provision in exurban parcels containing at least one pond, including '
+    'creating a raster land use map and training ',
+    'remote sensing analysis, identifying uses and desires of individuals living in isolated rural parcels that lead '
+    'to publication ',
     '(https://www.mdpi.com/2073-445X/10/5/448)',
     ]
 job4 = 'GIS Associate'
@@ -183,61 +181,70 @@ pdf = canvas.Canvas(fileName)
 pdf.setTitle(documentTitle)
 
 # Name
-create_features('Center', fullName, 100, 760, font_type=fontTypeBase, font_size=titleSize)
+create_features('Center', fullName, 100, 780, font_type=fontTypeBase, font_size=titleSize)
 # Contact Information
-create_features('Multi', contactInformation, 200, 770, font_type=fontTypeBase, font_size=textSize)
+create_features('Multi', contactInformation, 200, 788, font_type=fontTypeBase, font_size=textSize)
 
 # Create Guide/Formatting Lines
-create_features('Line', '', 0, 750, 550, 750)
-create_features('Line', '', 550, 750, 550, 50)
+create_features('Line', '', 0, 770, 550, 770)
+create_features('Line', '', 550, 770, 550, 50)
+create_features('Line', '', 0, 50, 550, 50)
 
 # Education Header and Line
-create_features('String', 'Education', 40, 723, font_type=fontTypeBold, font_size=headerSize)
+create_features('String', 'Education', 40, 748, font_type=fontTypeBold, font_size=14)
 # Education String
-create_features('Multi', education, 120, 738, font_type=fontTypeBase, font_size=textSize)
+create_features('Multi', education, 120, 758, font_type=fontTypeBase, font_size=textSize)
 
 # Separator Line between Education and Experience
-create_features('Line', '', 0, 700, 550, 700)
-create_features('Line', '', 400, 750, 400, 700)
-create_features('Multi', metaData, 405, 738, font_type=fontTypeBase, font_size=9)
+create_features('Line', '', 0, 730, 550, 730)
+create_features('Line', '', 400, 770, 400, 730)
+create_features('Multi', metaData, 405, 758, font_type=fontTypeBase, font_size=textSize)
 
 # Experience Header
-create_features('String', 'Experience', 40, 685, font_type=fontTypeBold, font_size=headerSize)
+create_features('String', 'Experience', 40, 718, font_type=fontTypeBold, font_size=14)
 
 # Current Job
-create_features('String', latestJob, 40, 670, font_type=fontTypeBase, font_size=textSize)
-create_features('String', latestEmployer, 40, 658, font_type=fontTypeBase, font_size=textSize)
-create_features('String', latestTime, 325, 665, font_type=fontTypeBase, font_size=textSize)
-create_features('Multi', latestDesc, 50, 646, font_type=fontTypeBase, font_size=9)
+create_features('String', latestJob, 40, 706, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', latestEmployer, 40, 694, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', latestTime, 325, 700, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', latestDesc, 50, 682, font_type=fontTypeBase, font_size=textSize)
 
 # Previous Job
-create_features('String', previousJob, 40, 580, font_type=fontTypeBase, font_size=textSize)
-create_features('String', previousEmployer, 40, 568, font_type=fontTypeBase, font_size=textSize)
-create_features('String', previousTime, 325, 575, font_type=fontTypeBase, font_size=textSize)
-create_features('Multi', previousDesc, 50, 556, font_type=fontTypeBase, font_size=9)
+create_features('String', previousJob, 40, 640, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', previousEmployer, 40, 628, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', previousTime, 325, 635, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', previousDesc, 50, 616, font_type=fontTypeBase, font_size=textSize)
 
 # Job 1
-create_features('String', job1, 40, 490, font_type=fontTypeBase, font_size=textSize)
-create_features('String', employer1, 40, 478, font_type=fontTypeBase, font_size=textSize)
-create_features('String', time1, 325, 485, font_type=fontTypeBase, font_size=textSize)
-create_features('Multi', desc1, 50, 466, font_type=fontTypeBase, font_size=9)
+create_features('String', job1, 40, 570, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', employer1, 40, 558, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', time1, 325, 565, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', desc1, 50, 546, font_type=fontTypeBase, font_size=textSize)
 
 # Job 3
-create_features('String', job3, 40, 430, font_type=fontTypeBase, font_size=textSize)
-create_features('String', employer3, 40, 418, font_type=fontTypeBase, font_size=textSize)
-create_features('String', time3, 325, 425, font_type=fontTypeBase, font_size=textSize)
-create_features('Multi', desc3, 50, 406, font_type=fontTypeBase, font_size=9)
+create_features('String', job3, 40, 520, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', employer3, 40, 508, font_type=fontTypeBase, font_size=headerSize)
+create_features('String', time3, 325, 515, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', desc3, 50, 496, font_type=fontTypeBase, font_size=textSize)
 
 # Skills and Qualifications Header
-create_features('String', 'Skills and Qualifications', 40, 365, font_type=fontTypeBold, font_size=headerSize)
+create_features('String', 'Skills and Qualifications', 40, 462, font_type=fontTypeBold, font_size=14)
 
 # GIS Skills
-create_features('String', skillHeader1, 40, 348, font_type=fontTypeBase, font_size=textSize)
-create_features('Multi', skillSet1, 50, 336, font_type=fontTypeBase, font_size=9)
+create_features('String', skillHeader1, 40, 450, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', skillSet1, 50, 438, font_type=fontTypeBase, font_size=textSize)
 
 # Technology and Communication
-create_features('String', skillHeader2, 40, 210, font_type=fontTypeBase, font_size=textSize)
-create_features('Multi', skillSet2, 50, 198, font_type=fontTypeBase, font_size=9)
+create_features('String', skillHeader2, 40, 330, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', skillSet2, 50, 318, font_type=fontTypeBase, font_size=textSize)
+
+# Research and Analysis
+create_features('String', skillHeader3, 40, 238, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', skillSet3, 50, 226, font_type=fontTypeBase, font_size=textSize)
+
+# Leadership, Collaboration, and Teamwork
+create_features('String', skillHeader4, 40, 154, font_type=fontTypeBase, font_size=headerSize)
+create_features('Multi', skillSet4, 50, 142, font_type=fontTypeBase, font_size=textSize)
 
 # save the pdf
 pdf.save()
