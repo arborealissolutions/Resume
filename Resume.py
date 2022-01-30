@@ -67,13 +67,13 @@ latestJob = 'Database Administrator and Developer (Database Specialist)'
 latestEmployer = 'Hamilton County Public Health, Cincinnati OH'
 latestTime = 'November 2019 - Present'
 latestDesc = [
-    'Responsible for creating, maintaining, and updating Microsoft Access databases for agency-wide programs and '
-    'projects. Utilized Python, PowerShell, ',
-    'VBA, and C# to create tools and procedures to improve IT efficiency and response rate. Used Python scripting to '
-    'automate the creation and maintenance ',
-    'of GIS data layers through ArcPY, both locally and on the web. Developed various data cleaning and verification '
-    'tools to improve reliability of in ',
-    'agency-wide tools. Cleaned and prepared COVID-19 data for analysis and geocoding',
+    'Responsible for creating, maintaining, and updating production level relational databases (Microsoft SQL, '
+    'POSTGRESQL, and Microsoft Access ',
+    'databases for agency-wide programs and projects. Utilized T-SQL, Python, PowerShell, VBA, and C# to create tools '
+    'and procedures to improve IT ',
+    'efficiency and response rate. Used Python scripting to automate the creation and maintenance of GIS data layers '
+    'through ArcPY, both locally and on ',
+    'the web. Developed various data cleaning and verification tools to improve reliability of in agency-wide tools.'
 ]
 previousJob = 'GIS Specialist (Public Health Sanitarian I)'
 previousEmployer = 'Hamilton County Public Health, Cincinnati OH'
